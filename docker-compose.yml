@@ -1,5 +1,8 @@
 version: "3"
 services:
+networks:
+  podman:
+    driver:  bridge
 api:
   build:
     context: .
@@ -18,6 +21,4 @@ rmq:
   environment:
     - RABBITMQ_DEFAULT_USER=admin
     - RABBITMQ_DEFAULT_PASS=admin
-networks:
-  podman:
-    driver:  bridge
+
