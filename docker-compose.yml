@@ -9,12 +9,12 @@ api:
   volumes:
     - ./.env:/opt/app/.env
   networks:
-    -podman
+    - podman
 rmq:
   image: rabbitmq:3-management
   restart: always
   networks:
-    -podman
+    - podman
   environment:
     - RABBITMQ_DEFAULT_USER=admin
     - RABBITMQ_DEFAULT_PASS=admin
